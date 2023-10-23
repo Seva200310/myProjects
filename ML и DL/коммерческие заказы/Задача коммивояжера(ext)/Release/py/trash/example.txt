@@ -1,0 +1,5 @@
+Москва-Спб-Псков
+https://yandex.ru/maps/?from=tabbar&ll=32.974733%2C57.909350&mode=routes&rtext=55.755864%2C37.617698~59.938955%2C30.315644~57.819274%2C28.332460&rtt=auto&ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzAwMDA5NBIa0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAiCg2GeBZCFQEGX0I%2C~~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzE0OTQ2MhIY0KDQvtGB0YHQuNGPLCDQn9GB0LrQvtCyIgoN4KjiQRXwRmdC&source=serp_navig&z=6.81
+
+Нью-йорк-Мехико-Буэнос Айрес
+https://yandex.ru/maps/?from=tabbar&ll=-45.209063%2C-6.452461&mode=routes&rtext=40.714606%2C-74.002800~19.432605%2C-99.133296~-34.615697%2C-58.435104&rtt=auto&ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoyMjQwNTc0NzY1EixVbml0ZWQgU3RhdGVzIG9mIEFtZXJpY2EsIE5ldyBZb3JrLCBOZXcgWW9yayIKDW8BlMIVwdsiQg%2C%2C~~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoyMjQwNTcxODE5EitBcmdlbnRpbmEsIENpdWRhZCBBdXTDs25vbWEgZGUgQnVlbm9zIEFpcmVzIgoNjL1pwhV5dgrC&source=serp_navig&z=3.42
