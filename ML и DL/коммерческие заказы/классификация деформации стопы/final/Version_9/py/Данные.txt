@@ -1,0 +1,3 @@
+Почта для рассылки'Ortuga.SguMed@yandex.ru'
+Пароль'pzsbymrrhvfujiwo'
+Команда для запуска апи uvicorn api:app --reload

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Главная страница</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link type="text/css" rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <script>
+            function send_mail() {
+                let xhr = new XMLHttpRequest();
+                let obj = {
+                    mail: document.getElementById("input_email").value,
+                    photo: "res.png"
+                };
+                //alert(document.getElementById("res_img").src.split('/')[-1]);
+                let json = JSON.stringify(obj);
+                // 2. Настраиваем его: GET-запрос по URL /article/.../load
+                xhr.open('POST', 'http://127.0.0.1:8000/mail');
+                xhr.responseType = 'json';
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                // 3. Отсылаем запрос
+                xhr.send(json);
+
+                // 4. Этот код сработает после того, как мы получим ответ сервера
+                let res;
+                xhr.onload = function () {
+                    if (xhr.response == 'EmailNotValidError') { // анализируем HTTP-статус ответа, если статус не 200, то произошла ошибка
+                        alert('invalid e-mail,please enter the correct e-mail'); // Например, 404: Not Found
+                        res = 0;
+                        alert(res);
+                    } else { // если всё прошло гладко, выводим результат
+                        
+                        alert('Все окей'); // Например, 404: Not Found
+                        make_view();
+                        let outputFieldsArr = document.getElementsByClassName("output");
+
+                        for (let outputField of outputFieldsArr) {
+                            if (outputField.style.visibility != "visible") { outputField.style.visibility = "visible"; }
+                        }
+                    }
+                    
+                }
+            } 
+            function make_view() {
+                document.getElementById("res_img").src = "window.png"
+                let xhr = new XMLHttpRequest();
+                let obj = {
+                    photo: document.getElementById("input_pict").src
+                };
+
+                //alert(document.getElementById("res_img").src.split('/')[-1]);
+                let json = JSON.stringify(obj);
+                // 2. Настраиваем его: GET-запрос по URL /article/.../load
+                xhr.open('POST', 'http://127.0.0.1:8000/makePrediction');
+                xhr.responseType = 'json';
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                // 3. Отсылаем запрос
+                xhr.send(json);
+
+                // 4. Этот код сработает после того, как мы получим ответ сервера
+                xhr.onload = function () {
+                    
+                        document.getElementById("res_img").src="py/res.png"
+                        //alert('Все окей'); // Например, 404: Not Found
+                   
+                }
+            }
+
+        function loadImg(){
+            document.getElementById('getFileinp').click();}
+
+        function fileSelected(event){
+            //alert(input.files[0].name);
+            //document.getElementById("input_pict").src = "File: " + event.files[0].name;
+            var selectedFile = event.target.files[0];
+            var reader = new FileReader();
+
+            var imgtag = document.getElementById("input_pict");
+            imgtag.title = selectedFile.name;
+
+            reader.onload = function(event) {
+                imgtag.src = event.target.result;
+            };
+
+
+            reader.readAsDataURL(selectedFile);
+
+            document.getElementById("send").style.visibility="visible";}
+        </script>
+
+
+        <table border="1" width="100%">
+            <tr id="menu"> <!--Оглавление и контакты-->
+                <td width="80%" class="header">
+                    <b><a href="Main page.html">Главная страница</a></b>
+                    <b><a href="page_1.html">Мед инфо 1</a></b>
+                    <b><a href="page_2.html">Мед инфо 2</a></b>
+                    <b><a href="page_3.html">Мед инфо 3</a></b>
+                    <b><a href="page_4.html">Мед инфо 4</a></b>
+                   </td> 
+                <td width="50%" align="right"><p>Контакты:</p></td>
+            </tr> 
+
+            <tr id="title"> <!--Заголовок сайта-->
+                <td colspan="2">
+                    <h1>Название сайта</h1>
+                </td>
+            </tr>
+
+
+            <tr id="main"> <!--Основная страница-->
+                <td colspan="2">
+                    <p id="mail" class="inputMail">Введите свой e-mail:</p>
+                    <input id="input_email" class="inputMail" type="email">
+                    <p>Загрузите фото</p>
+                    <input id="getFileinp" type="file" accept="image/*" style="display: none;" onchange="fileSelected(event)">
+                    <br><button id="send" onclick="send_mail()"><a>Отправить</a></button>
+                    <img src="window.png" id="input_pict" height="224" width="224" hspace="45" onclick='loadImg()' vspace="10">
+                    <img src="arrow.png" height="100" width="100" hspace="100" vspace="50">
+                    <img id="res_img" class="output" src="window.png" height="400" width="400" hspace="45">
+
+                </td>
+            </tr>
+
+            <tr id="info"> <!--Техническая информация-->
+                <td colspan="2">Техническая информация</td>
+            </tr>
+        </table>
+
+        
+    </body>
+</html>

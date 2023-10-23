@@ -1,0 +1,19 @@
+body{margin: 1;
+font-family: Georgia, 'Times New Roman', Times, serif;
+background-color: antiquewhite;}
+
+table{background-color:brown;}
+
+#menu{background-color:burlywood;}
+#title{background-color:antiquewhite;}
+#main{background-color: antiquewhite;}
+#info{background-color:burlywood;}
+
+#result{margin-left: 695px}
+#sending{margin-left: 695px}
+
+.output{visibility:hidden;}
+
+#send{visibility:hidden;}
+
+.header {font-size: 20px;}

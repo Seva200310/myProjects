@@ -1,0 +1,10 @@
+fastapi
+pydantic
+keras
+tensorflow
+numpy
+pandas
+cv2
+matplotlib
+opencv-python
+uvicorn
