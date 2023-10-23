@@ -1,0 +1,48 @@
+
+#tokenField {
+    position: absolute;
+    left: 100px;
+    top:50px;
+}
+#userIDg {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+}
+#cityLinks {
+    position: absolute;
+    left: 100px;
+    top: 150px;
+}
+#friendsLinks {
+    position: absolute;
+    left: 300px;
+    top: 150px;
+}
+#sendButton {
+    position: absolute;
+    left: 200px;
+    top: 250px;
+    height:50px;
+    width:150px
+}
+#instrutions {
+    position: absolute;
+    left: 650px;
+    top: 30px;
+}
+#results {
+    position: absolute;
+    left: 50px;
+    top: 400px;
+}
+#log {
+    position: absolute;
+    left: 700px;
+    top: 430px;
+}
+#plan {
+    position: absolute;
+    left: 700px;
+    top: 530px;
+}
